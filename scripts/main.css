@@ -1,0 +1,458 @@
+@font-face { 
+	font-family: "Ubuntu"; 
+	src: url('../fonts/Ubuntu-Regular.ttf'); 
+}
+
+body {
+	font-family: "Ubuntu";
+    scroll-behavior: smooth;
+}
+.top-menu{
+    position: fixed;
+    top: 0xp;
+    right: 0px;
+    left: 0px;
+    height: 70px;
+    overflow: hidden;
+    z-index: 10;
+    background-color: white;
+}
+/*logo*/
+.top-menu-inner{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 100%;
+    width: 100%;
+    padding: none;
+    list-style: none;
+}
+.top-menu-inner tr td{
+    padding: 0px;
+}
+.top-menu-logo-table{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    padding: none;
+    list-style: none;
+    height: 70px;
+}
+.top-menu-logo-table tr td{
+    vertical-align: center;
+    padding: 0px 10px 0px 0px;
+}
+.top-menu-logo-table tr td h1{
+    font-size: 45px;
+}
+/*txt*/
+.top-menu-ws{
+    position: relative;
+    float: right;
+}
+.top-menu-menu{
+    text-align: right;
+}
+.top-menu-menu a{
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 10px 5px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+}
+.top-menu-menu a::after {
+    display:block;
+    content: '';
+    border-bottom: solid 4px #019fb6;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+
+.top-menu-menu a:hover::after {
+    transform: scaleX(1);
+}
+#mobile-menu{
+    display: none;
+}
+@media screen and (max-width: 850px){
+    .top-menu-logo-table tr td h1{
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 750px){
+    #mobile-menu{
+        display: table-cell;
+    }
+    #desktop-menu{
+        display: none;
+    }
+}
+
+.mobile-menu{
+    position: fixed;
+    top: -100%;
+    left: 0px;
+    right: 0px;
+    height: 100%;
+    z-index: 11;
+    background-color: white;
+    transition: 1s;
+}
+.mobile-menu-div{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+}
+.mobile-menu-btn:hover{
+    animation: mobmenbtn 0.7s forwards;
+}
+.mobile-menu-bar{
+    position: absolute;
+    left: 0px;top: 0px;
+    bottom: 0px;width: 10px;
+    background-color: red;
+    animation: mobilemenudivan 5s infinite;
+}
+@keyframes mobilemenudivan{
+    0% {
+        background-color: red;
+    }
+    34% {
+        background-color: #0096D6;
+    }
+    67% {
+        background-color: #F4B400;
+    }
+    100% {
+        background-color: red;
+    }
+}
+.mobile-menu-div div{
+    margin: 20px 0px;
+}
+.mobile-menu-div div a{
+    font-size: 30px;
+}
+
+/* slide main */
+.slide-main{
+    position: relative;
+    top: 60px;
+    right: 0px;
+    left: 0px;
+    height: 95vh;
+    margin-bottom: 60px;
+    background-image: url("../imgs/slideshow0.png");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: 1s;
+}
+.slide-main-dec1{
+    position: absolute;
+    width: 500px;
+    height: 1450px;
+    top: -380px;
+    left: -230px;
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(5px);
+    transform: rotate(20deg);
+    transition: 1s;
+}
+.slide-main-text{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    width: 600px;
+    color: rgb(225, 225, 225);
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    text-shadow: 0px 0px 5px black;
+}
+.slide-main-text h1{
+    font-size: 50px;
+}
+.slide-main-text2{
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+.slide-main-text2 i{
+    border: solid white;
+    box-shadow: 2px 2px red;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 10px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+@media screen and (max-width: 1000px){
+    .slide-main-dec1{
+        left: -330px;
+    }
+    .slide-main-text{
+        left: 10%;
+        width: 90%;
+    }
+}
+@media screen and (max-width: 800px){
+    .slide-main-dec1{
+        left: -430px;
+    }
+    .slide-main-text{
+        left: 5%;
+        width: 90%;
+    }
+}
+@media screen and (max-width: 600px){
+    .slide-main-dec1{
+        left: -480px;
+    }
+}
+
+
+/* div 1 */
+.div1{
+    padding: 100px 30px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.div1-hub{
+    width: 100%;
+    text-align: right;
+}
+.div1-hub a{
+    width: auto;
+    height: auto;
+    font-size: 25px;
+    width: 350px;
+    margin: 10px 10px;
+    color: white;
+    background-color: #075E54;
+}
+.div1-hub a:hover{
+    color: white;
+}
+
+.div1-hub a table{
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    border: none;
+    margin: none;
+    padding: none;
+}
+.div1-hub a table tr td{
+    vertical-align: center;
+    text-align: center;
+}
+.div1-hub a table tr td img{
+    height: 60px;
+    width: auto;
+}
+.div1-img2{
+    display: none;
+}
+@media screen and (max-width: 1000px){
+
+}
+@media screen and (max-width: 750px){
+    .div1{
+        padding: 100px 10px;
+    }
+    .div1 h1{
+        text-align: center;
+    }
+    .div1-hub{
+        text-align: center;
+    }
+    .div1-hub a{
+        width: 90%;
+    }
+    .div1-img1{
+        display: none;
+    }
+    .div1-img2{
+        display: inline-block;
+    }
+}
+
+/* div 2 */
+.div2{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: url(../imgs/pexels-lukas-590022.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.div2 div{
+    width: 100%;
+    height: 100%;
+    padding: 100px 30px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+}
+.div2 p{
+    line-height: 40px;
+    font-size: 20px;
+    text-align: justify;
+}
+@media screen and (max-width: 750px){
+    .div2 div{
+        padding: 100px 10px;
+    }
+}
+
+/* div 3 */
+.div3{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    transition: 1%;
+    padding: 100px 0px;
+    background-color: #3282B8;
+    color: white;
+}
+.div3 div h1{
+    text-align: center;
+}
+.div3-parents{
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+.div3-div{
+    display: flex;
+    flex: 1;
+    position: relative;
+    width: 48%;
+    margin: 20px 1%;
+    padding: 0px 0px;
+}
+.div3-div div img{
+    width: 50px;
+    height: auto;
+    margin-right: 5px;
+}
+.div3 div p{
+    font-size: 18px;
+    text-align: justify;
+}
+@media screen and (max-width: 800px){
+    .div3-parents{
+        display: block;
+    }
+    .div3-div{
+        width: 98%;
+    }
+}
+
+
+/*div 4*/
+.div4{
+    position: relative;
+    width: 100%;
+    padding: 100px 20px 0px 20px;
+}
+.div4-row{
+    position: relative;
+    display: flex;
+    padding: 30px 0px;
+}
+.div4-collumn{
+    flex: 1;
+    text-align: center;
+    margin: 10px 10px;
+}
+.div4-collumn img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+}
+@media screen and (max-width: 750px){
+    .div4-row{
+        display: block;
+    }
+    .div4-collumn{
+        flex: 0;
+    }
+}
+
+.div5{
+    position: relative;
+    width: 100%;
+    padding: 50px 10px;
+    overflow: hidden;
+}
+
+
+/* footer */
+.footer{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px;
+    background-color: #3D3C42;
+}
+
+/* animated */
+.reveal1{
+    position: relative;
+    left: -120%;
+    transition: 0.7s;
+}
+.reveal1.appear1{
+    position: relative;
+    left: 0%;
+}
+.reveal2{
+    position: relative;
+    right: -120%;
+    transition: 0.7s;
+}
+.reveal2.appear2{
+    position: relative;
+    right: 0%;
+}
+
+.reveal3{
+    transform: rotateX(-90deg);
+    transition: 0.7s;
+}
+.reveal3.appear3{
+    transform: rotateX(0deg);
+}
+.reveal4{
+    transform: rotateY(90deg);
+    transition: 0.7s;
+}
+.reveal4.appear4{
+    transform: rotateY(0deg);
+}
+.reveal5{
+    transform: scaleY(0);
+    transition: 0.7s;
+}
+.reveal5.appear5{
+    transform: scaleY(1);
+}
+.reveal6{
+    transform: scaleX(0);
+    transition: 0.7s;
+}
+.reveal6.appear6{
+    transform: scaleX(1);
+}
